@@ -1,5 +1,5 @@
-# Description
-DLL used for DLL search order hijacking POC written in Rust. It's targeting the KBDUS.dll and placed within the appropriate Edge folder. When Edge executes, the dll is loaded and a connection back to my Sliver C2 is made. This does need local admin privilege in order to work.
+# Description in Relation to Persistence
+DLL used for DLL search order hijacking POC written in Rust. For persistence, you want to find a process that resides in a directory that a standard user can access. This makes it easier to write the dll into that folder path and when the application is ran, it'll run this dll.
 # Creating Your Own
 It's easy to create and setup a DLL to do what you want it to.
 ## Tools
